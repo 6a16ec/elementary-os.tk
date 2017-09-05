@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <title>elementary os</title>
         <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+        <script> $(function(){ $("#header").load("menu.html"); });</script>
         <!-- CDN -->
 		<link href="css/import.css" rel="stylesheet" type="text/css" />
 		<!-- /.CDN -->
 		<script type="text/javascript" src="js/jquery.anoslide.js"></script>
-        <link rel="import" href="menu.html">
         <style type="text/css">
             			.carousel { position:relative; min-height: 20px; height:auto !important; height: 20px;  }
 			.carousel .next,
@@ -35,11 +35,7 @@
         </style>
     </head>
     <body bgcolor="#f8fab2">
-            <script>
-      var link = document.querySelector('link[rel=import]');
-      var content = link.import.querySelector('#intro-dm');
-      document.body.appendChild(content.cloneNode(true));
-    </script>
+        <div id="header"></div>
         <img src="logo.png" width="400" height="400" style="position: absolute;left: 40px; top: 120px;" onClick='location.href="https://elementary.io/"'>
         <div style="position:absolute;padding-left: 480px;top: 120px;">
             <div style="height:400px;display: table;">
