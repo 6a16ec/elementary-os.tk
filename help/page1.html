@@ -4,14 +4,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
         <title>Test</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
-
         <script src="http://dev.elementary-os.tk/jquery.min.js"></script>
-        <script> $(function(){ $("#header").load("header.html"); });</script>
+        <link rel="import" href="http://elementary-os.tk/menu.html">
     </head>
 
     <body>
+        <script async>
+function handleLoad(e) { console.log('Импорт выполнен успешно: ' + e.target.href);
+}
+function handleError(e) { console.log('Ошибка импорта: ' + e.target.href);
+}
+</script>
 
-    <div id="header"></div>
+<link rel="import" href="http://elementary-os.tk/menu.html" onload="handleLoad(event)" onerror="handleError(event)">
     <div id="main">
         <p align = "center">Убираем лишние ярлыки в Elementary OS</p>
         Меня всегда удручал беспорядок в в меню приложений Elementary OS . Конечно, ситуация одинакова для поголовного большинства дистрибутивов, так как информацию о том, как и где показывать программу прописывают сами создатели этих программ в *.desktop файлах. И многих из них похоже не волнует тот беспорядок, который происходит от такого халатного отношения к логике построения навигации.
